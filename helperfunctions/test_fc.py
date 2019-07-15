@@ -10,8 +10,6 @@ transform = transforms.Compose(
                                 transforms.ToTensor(),
                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
-#trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
-#                                        download=True, transform=transform)
 trainset = torchvision.datasets.ImageFolder(root='./mini', transform=transform)
 #print (trainset.imgs)
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=6,
@@ -111,7 +109,6 @@ with torch.no_grad():
         _, predicted = torch.max(outputs.data, 1)
         print (labels)
         print (outputs)
-#        print (predicted)
         imshow(torchvision.utils.make_grid(images))
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
