@@ -1,7 +1,15 @@
-
-# Cross-dimensional Weighting (CroW) aggregation
+# Optimization for Person Re-Identification in Tencent Co.,Ltd, Youtu Lab Data Center based on Cross-dimensional Weighting (CroW) aggregation 
 
 This repository contains a Python implementation of CroW aggregation for deep convolution features. CroW is an efficient non-parametric weighting and aggregation scheme to transform convolutional image features to a compact global image feature. This repository contains code to evaluate these global CroW features for image retrieval on common retrieval benchmarks. A full description of this work can be found at [http://arxiv.org/abs/1512.04065](http://arxiv.org/abs/1512.04065).
+
+### Modification based on original repository
+
+The original repository used naive and straightforward way to do feature-extracting, while in the modified version, we used pre-trained model ResNet101 to obtain feature tensor. Meanwhile, we seperately got the graph's top half and bottom half and concatenate the tensor together, then use the tensors to do CroW aggregation and PCA whitening, we finally gained a ~92% accuracy. Considering the test-data is not very clean, this is a satisfying result. 
+
+```bash
+python newfeat_extract_feature.py
+python evaluate.py
+```
 
 ### Installation
 
