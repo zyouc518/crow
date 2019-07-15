@@ -1,4 +1,4 @@
-# Optimization for Person Re-Identification in Tencent Co.,Ltd, Youtu Lab Data Center based on Cross-dimensional Weighting (CroW) aggregation 
+# Optimization for Person Re-Identification based on Cross-dimensional Weighting (CroW) aggregation 
 
 This repository contains a Python implementation of CroW aggregation for deep convolution features. CroW is an efficient non-parametric weighting and aggregation scheme to transform convolutional image features to a compact global image feature. This repository contains code to evaluate these global CroW features for image retrieval on common retrieval benchmarks. A full description of this work can be found at [http://arxiv.org/abs/1512.04065](http://arxiv.org/abs/1512.04065).
 
